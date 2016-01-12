@@ -1,0 +1,96 @@
+<?php
+$_data = $block->getRegData();
+?>
+
+<style>
+  .field label span{font-weight: bold;margin-top: 10px;}
+
+</style>
+
+<h1>Redda 2th Awa!!</h1>
+
+<div>
+    <div class="field first-name">
+        <label for="first-name" class="label"><span><?php echo __('First Name') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['first-name'] ?>
+        </div>
+    </div>
+
+
+    <div class="field middle-name">
+        <label for="middle-name" class="label"><span><?php echo __('Middle Name') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['middle-name'] ?>
+        </div>
+    </div>
+    <div class="field last-name">
+        <label for="last-name" class="label"><span><?php echo __('Last Name') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['last-name'] ?>
+        </div>
+    </div>
+
+
+    <div class="field email">
+        <label for="email" class="label"><span><?php echo __('Email') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['email'] ?>
+        </div>
+    </div>
+
+    <div class="field dob required">
+        <label for="dob" class="label"><span><?php echo __('Date Of Birth') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['dob'] ?>
+        </div>
+    </div>
+
+
+    <div class="field company">
+        <label for="company" class="label"><span><?php echo __('Company') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['company'] ?>
+        </div>
+    </div>
+
+    <div class="field address-1">
+        <label for="address-1" class="label"><span><?php echo __('Address 1') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['address-1'] ?>
+        </div>
+    </div>
+    <div class="field address-2">
+        <label for="address-2" class="label"><span><?php echo __('Address 2') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['address-2'] ?>
+        </div>
+    </div>
+
+    <div class="field user-name">
+        <label for="user-name" class="label"><span><?php echo __('User Name') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['user-name'] ?>
+        </div>
+    </div>
+
+
+    <div class="field password">
+        <label for="password" class="label"><span><?php echo __('Password') ?></span></label>
+
+        <div class="control">
+            <?php echo $_data['password'] ?>
+        </div>
+    </div>
+
+
+</div>

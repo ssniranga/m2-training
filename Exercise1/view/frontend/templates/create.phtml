@@ -1,0 +1,123 @@
+<?php
+$_data = $block->getRegData();
+?>
+
+<div style="max-width: 500px;">
+
+<form class="form create account form-create-account" action="<?php echo $block->getPostActionUrl() ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
+
+<fieldset class="fieldset create account" data-hasrequired="<?php echo __('* Required Fields') ?>">
+
+    <div class="field first-name required">
+        <label for="first-name" class="label"><span><?php echo __('First Name') ?></span></label>
+
+        <div class="control">
+            <input type="text" name="first-name" id="first-name" title="<?php echo __('first-name') ?>"
+                   class="input-text" required autocomplete="off" value="<?php echo $_data['first-name'] ?>">
+        </div>
+    </div>
+
+
+    <div class="field middle-name required">
+        <label for="middle-name" class="label"><span><?php echo __('Middle Name') ?></span></label>
+
+        <div class="control">
+            <input type="text" name="middle-name" id="middle-name" title="<?php echo __('middle-name') ?>"
+                   class="input-text" autocomplete="off" value="<?php echo $_data['middle-name']?>">
+        </div>
+    </div>
+    <div class="field last-name required">
+        <label for="last-name" class="label"><span><?php echo __('Last Name') ?></span></label>
+
+        <div class="control">
+            <input type="text" name="last-name" id="last-name" title="<?php echo __('last-name') ?>" required
+                   class="input-text" autocomplete="off" value="<?php echo $_data['last-name'] ?>">
+        </div>
+    </div>
+
+
+    <div class="field email required">
+        <label for="email" class="label"><span><?php echo __('Email') ?></span></label>
+
+        <div class="control">
+            <input type="email" name="email" id="email" title="<?php echo __('email') ?>" required
+                   class="input-text" autocomplete="off" value="<?php echo $_data['email']  ?>">
+        </div>
+    </div>
+    <div class="field dob required">
+        <label for="dob" class="label"><span><?php echo __('Age') ?></span></label>
+
+        <div class="control">
+            <input type="number" name="dob" id="dob" title="<?php echo __('dob') ?>" required
+                   class="input-text" autocomplete="off" value="<?php echo $_data['dob'] ?>">
+        </div>
+    </div>
+
+
+
+    <div class="field company required">
+        <label for="company" class="label"><span><?php echo __('Company') ?></span></label>
+
+        <div class="control">
+            <input type="text" name="company" id="company" title="<?php echo __('company') ?>" required
+                   class="input-text" autocomplete="off" value="<?php  $_data['company'] ?>">
+        </div>
+    </div>
+
+    <div class="field address-1 required">
+        <label for="address-1" class="label"><span><?php echo __('Address 1') ?></span></label>
+
+        <div class="control">
+            <input type="text" name="address-1" id="address-1" title="<?php echo __('address-1') ?>" required
+                   class="input-text" autocomplete="off" value="<?php  $_data['address-1'] ?>">
+        </div>
+    </div>
+    <div class="field address-2 required">
+        <label for="address-2" class="label"><span><?php echo __('Address 2') ?></span></label>
+
+        <div class="control">
+            <input type="text" name="address-2" id="address-2" title="<?php echo __('address-2') ?>" required
+                   class="input-text" autocomplete="off" value="<?php $_data['address-2'] ?>">
+        </div>
+    </div>
+
+    <div class="field user-name required">
+        <label for="user-name" class="label"><span><?php echo __('User Name') ?></span></label>
+
+        <div class="control">
+            <input type="text" name="user-name" id="user-name" title="<?php echo __('user-name') ?>" required
+                   class="input-text" autocomplete="off" value="<?php $_data['user-name'] ?>">
+        </div>
+    </div>
+
+
+    <div class="field password required">
+        <label for="password" class="label"><span><?php echo __('Password') ?></span></label>
+
+        <div class="control">
+            <input type="password" name="password" id="password" title="<?php
+            echo __('Password') ?>" class="input-text" data-validate="{required:true, 'validate-password':true}"
+                   autocomplete="off">
+        </div>
+    </div>
+    <div class="field confirmation required">
+        <label for="password-confirmation" class="label"><span><?php
+                echo __('Confirm Password') ?></span></label>
+
+        <div class="control">
+            <input type="password" name="password_confirmation" title="<?php
+            echo __('Confirm Password') ?>" id="password-confirmation" class="input-text"
+                    autocomplete="off" re>
+        </div>
+    </div>
+
+</fieldset>
+<div class="actions-toolbar">
+    <div class="primary">
+        <button type="submit" class="action submit primary" title="<?php /* @escapeNotVerified */
+        echo __('Create an Account') ?>"><span><?php /* @escapeNotVerified */
+                echo __('Create an Account') ?></span></button>
+    </div>
+</div>
+</form>
+</div>
