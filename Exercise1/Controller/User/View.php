@@ -16,14 +16,19 @@ class View extends \Magento\Framework\App\Action\Action
 {
 
     protected $pageFactory;
+    protected $session;
 
     public function __construct(
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
-        \Magento\Framework\App\Action\Context $context
+        \Magento\Framework\App\Action\Context $context,
+        \Magento\Customer\Model\Session $session
     ) {
         parent::__construct($context);
         $this->pageFactory = $resultPageFactory;
+        $this->session = $session;
     }
+
+
 
     public function execute()
     {
@@ -47,9 +52,12 @@ class View extends \Magento\Framework\App\Action\Action
             $boo = true;
         }
         if ($boo) {
+
             $this->messageManager->addError($valid);
+            $this->session->setUserFormData($this->getRequest()->getPostValue());
             $resultRedirect = $this->resultRedirectFactory->create();
             $resultRedirect->setPath('exercise/user/create');
+            //  $this->sesssion
             return $resultRedirect;
 
         } else {
